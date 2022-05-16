@@ -6,4 +6,4 @@
 
 # Saves responses to local storage so data is retained if page is refreshed
 
-Application was built with React (https://6282db5ccdec9a33179e8851--languagetranslate.netlify.app/).
+Application was built with React (https://languagetranslate.netlify.app/).
