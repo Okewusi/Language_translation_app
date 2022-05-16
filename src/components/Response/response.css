@@ -1,0 +1,40 @@
+
+.translationcontainer{
+    border: .1px solid var(--background);
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    background: var(--background);
+    padding: 0 .5rem;
+    justify-content: center;
+}
+.translationcontainer h3{
+    color: var(--inputText);
+}
+.translationcontainer p{
+    color: var(--white);
+}
+.promptcontainer .prompt, .rescontainer .response{
+    width: 10%;
+}
+.promptcontainer .text, .rescontainer .translate{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+.rescontainer .translate{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+}
+.language{
+    font-weight: bold;
+}
+@media only screen and (min-width: 600px) {
+    .response{
+      width: 80%;
+    }
+}
