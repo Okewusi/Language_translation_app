@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import Prompt from '../Prompt/Prompt'
 import Response from '../Response/Response'
 import './home.css'
@@ -10,7 +10,18 @@ import { Context } from '../../context/Context'
 
 const Home = () => {
     const[prompt, setPrompt,language,setLanguage,responses,setResponses,loading,setLoading] = useContext(Context);
+
+    // save and retrieve data from local storage, this helps retain data after page is reloaded
     
+    // useEffect(() => {
+    //     setResponses(JSON.parse(window.localStorage.getItem('translations')));
+    // }, []);
+    
+    // useEffect(() => {
+    //     window.localStorage.setItem('tranalations', responses);
+    // }, [responses]);
+    
+
   return (
     <div className='container'>
         <main className='maincontainer'>
