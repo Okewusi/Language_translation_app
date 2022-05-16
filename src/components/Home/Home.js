@@ -12,16 +12,17 @@ const Home = () => {
     const[prompt, setPrompt,language,setLanguage,responses,setResponses,loading,setLoading] = useContext(Context);
 
     // save and retrieve data from local storage, this helps retain data after page is reloaded
-    
-    // useEffect(() => {
-    //     setResponses(JSON.parse(window.localStorage.getItem('translations')));
-    // }, []);
-    
-    // useEffect(() => {
-    //     window.localStorage.setItem('tranalations', responses);
-    // }, [responses]);
-    
+    useEffect(()=>{
+        const data = window.localStorage.getItem('translate');
+        setResponses(JSON.parse(data))
+        console.log(data)
+    }, [])
+   
 
+    useEffect(() => {
+        window.localStorage.setItem('translate',JSON.stringify(responses));
+    }, [responses]);
+    
   return (
     <div className='container'>
         <main className='maincontainer'>

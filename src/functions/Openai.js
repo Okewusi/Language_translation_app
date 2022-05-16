@@ -1,12 +1,13 @@
 const { Configuration, OpenAIApi} = require('openai');
 const configuration = new Configuration({
-    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    apiKey: process.env.REACT_APP_KEY,
 })
 const openai = new OpenAIApi(configuration)
 
 
 
 export const translate = async (text, language,setResponses, setLoading, setText) =>{
+
 
     try {
         // set loading to true before calling API
@@ -15,6 +16,7 @@ export const translate = async (text, language,setResponses, setLoading, setText
             return
         }
         setLoading(true);
+
         const response = await openai.createCompletion("text-davinci-002", {
             prompt: `Translate this into ${language}\n${text}`,
             temperature: 0.3,
@@ -33,11 +35,12 @@ export const translate = async (text, language,setResponses, setLoading, setText
         // switch loading to false after fetch is complete
         setLoading(false);
         setText('');
-      } catch (error) {
+    } catch (error) {
         // add error handling here
         alert('unable to translate')
+        console.log(error.response.data.error)
         setLoading(false);
-      }
+    }
 }
 
 export const getText = (event, setPrompt)=>{
