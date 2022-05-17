@@ -12,7 +12,7 @@ const Prompt = () => {
       translate(prompt,language,setResponses,setLoading,setPrompt)
       
     })}>
-      <textarea className='text' id='text' value={prompt} placeholder='Enter text to translate in English' onChange={(event)=>getText(event, setPrompt)}/> <br/>
+      <textarea className='text' id='text' value={prompt} placeholder='Enter text in English to translate' onChange={(event)=>getText(event, setPrompt)}/> <br/>
       <label htmlFor='languages' >Select language to translate to:</label> <br/>
       <select id='languages' value={language} onChange={(event)=>getLanguage(event, setLanguage)}>
         <option value='german'>German</option>
