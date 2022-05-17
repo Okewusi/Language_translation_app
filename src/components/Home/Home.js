@@ -28,7 +28,7 @@ const Home = () => {
         <main className='maincontainer'>
             <header>OPEN AI</header>
             <h1>Get a quick, free translation.</h1>
-            <p className='desc'> Translate from english to German, Chinese, French, Spanish, Japanese, Russian, Arabic, Portuguese, Dutch or Greek</p>
+            <p className='desc'> Translate from English to German, Chinese, French, Spanish, Japanese, Russian, Arabic, Portuguese, Dutch or Greek</p>
             <Prompt />
             <h2>Translation Results</h2>
             <article className='responsecontainer'>
